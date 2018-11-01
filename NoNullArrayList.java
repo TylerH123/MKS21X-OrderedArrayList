@@ -10,8 +10,13 @@ public class NoNullArrayList<T> extends ArrayList<T>{
     if (element == null) return false;
     return super.add(element);
   }
+  public void add(int index, T element){
+    if (index < 0 || index > super.size()) throw new ArrayIndexOutOfBoundsException();
+    if (element == null) throw new IllegalArgumentException();
+    super.add(index, element);
+  }
   public T set(int index, T element){
-    if (index < 0 || index >= super.size()) throw new ArrayIndexOutOfBoundsException();
+    if (index < 0 || index > super.size()) throw new ArrayIndexOutOfBoundsException();
     if (element == null){
       throw new IllegalArgumentException();
     }
