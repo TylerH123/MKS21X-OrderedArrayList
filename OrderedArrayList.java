@@ -21,6 +21,15 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
     super.set(idx1, obj1);
     super.set(idx2, obj2);
   }
+  public boolean add(T element){
+    super.add(element);
+    order();
+    return true;
+  }
+  public void add(int index, T element){
+    super.add(index, element);
+    order();
+  }
 }
 
 //["1", "3", "2", "5", "6"]
