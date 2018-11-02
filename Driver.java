@@ -17,5 +17,16 @@ public class Driver{
     catch(ArrayIndexOutOfBoundsException e){
       System.out.println("Fix Index");
     }
+    arr.set(1, "xxxx");
+    System.out.println(arr);
+    OrderedArrayList<String> ord = new OrderedArrayList<>();
+    ord.add("5");
+    ord.add("3");
+    ord.add("9");
+    ord.add("7");
+    ord.add("Dogs");
+    ord.add("jesus");
+    ord.add("apple");
+    System.out.println(ord);
   }
 }
