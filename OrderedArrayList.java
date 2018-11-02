@@ -19,6 +19,7 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
   }
   private void swap(int idx1, T obj1, int idx2, T obj2){
     super.set(idx1, obj1);
+    super.set(idx2, obj2);
   }
 }
 
