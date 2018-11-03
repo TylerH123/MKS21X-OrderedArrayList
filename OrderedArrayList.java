@@ -10,12 +10,15 @@ public class OrderedArrayList<T extends Comparable<T>> extends NoNullArrayList<T
       super.add(element);
       return true;
     }
-    if (super.get(super.size() - 1).compareTo(element) <= 0 ){
-      super.add(element);
+    int len = super.size();
+    for (int i = 0; i < len; i++){
+      if(super.get(i).compareTo(element) >= 0){
+        super.add(i, element);
+        len--;
+        return true;
+      }
     }
-    else{
-      super.add(super.size() - 1, element);
-    }
+    super.add(element);
     return true;
   }
   public void add(int index, T element){
