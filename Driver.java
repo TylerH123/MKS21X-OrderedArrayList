@@ -22,11 +22,13 @@ public class Driver{
     ord.add("3");
     ord.add("9");
     ord.add("7");
-    //ord.add("Dogs");
-    //ord.add("jesus");
-    //ord.add("apple");
+    ord.add("Dogs");
+    ord.add("jesus");
+    ord.add("apple");
+    ord.add("carrot");
     System.out.println(ord);
     System.out.println(ord.set(2, "1"));
+    System.out.println(ord.set(6, "zombie"));
     System.out.println(ord);
   }
 }
